@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\XmlSignatureController;
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
-Route::get('/', [XmlSignatureController::class, 'verify']);
+Route::post('/', [XmlSignatureController::class, 'verify']);
 
